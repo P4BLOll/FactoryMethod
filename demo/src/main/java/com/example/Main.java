@@ -7,12 +7,14 @@ public class Main extends JFrame {
 
     public Main() {
         setTitle("Padrões de Projeto: Factory Method & Abstract Factory");
-        setSize(450, 400);
+        setSize(500, 440);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
+        ((JComponent) getContentPane()).setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         setLayout(new GridLayout(3, 1, 10, 10));
 
-        JPanel panelParte1 = new JPanel();
+        JPanel panelParte1 = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
         panelParte1.setBorder(BorderFactory.createTitledBorder("Parte 1: Factory Method (Veículos)"));
         JButton btnCarro = new JButton("Criar Carro");
         JButton btnMoto = new JButton("Criar Moto");
@@ -25,8 +27,8 @@ public class Main extends JFrame {
         panelParte1.add(btnCarro);
         panelParte1.add(btnMoto);
 
-        JPanel panelFiat = new JPanel();
-        panelFiat.setBorder(BorderFactory.createTitledBorder("Partes 2 e 3: Abstract Factory (Fiat)"));
+        JPanel panelFiat = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
+        panelFiat.setBorder(BorderFactory.createTitledBorder("Abstract Factory - Família Fiat"));
         JButton btnFiatSedan = new JButton("Sedan (Cronos)");
         JButton btnFiatHatch = new JButton("Hatch (Argo)");
         JButton btnFiatSUV = new JButton("SUV (Pulse)");
@@ -41,8 +43,8 @@ public class Main extends JFrame {
         panelFiat.add(btnFiatHatch);
         panelFiat.add(btnFiatSUV);
 
-        JPanel panelVolks = new JPanel();
-        panelVolks.setBorder(BorderFactory.createTitledBorder("Partes 2 e 3: Abstract Factory (Volks)"));
+        JPanel panelVolks = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
+        panelVolks.setBorder(BorderFactory.createTitledBorder("Abstract Factory - Família Volkswagen"));
         JButton btnVolksSedan = new JButton("Sedan (Virtus)");
         JButton btnVolksHatch = new JButton("Hatch (Polo)");
         JButton btnVolksSUV = new JButton("SUV (T-Cross)");
@@ -63,6 +65,10 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {}
+
         SwingUtilities.invokeLater(() -> new Main().setVisible(true));
     }
 }

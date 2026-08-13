@@ -2,7 +2,6 @@ package com.example;
 
 import javax.swing.JOptionPane;
 
-// Interfaces e classes de pacote (sem o 'public')
 interface Veiculo {
     void exibirDetalhes();
 }
@@ -21,7 +20,6 @@ class Moto implements Veiculo {
     }
 }
 
-// Classe principal do arquivo (com o 'public')
 public class VeiculoFactory {
     public Veiculo criarVeiculo(String tipo) {
         if (tipo != null && tipo.equalsIgnoreCase("CARRO")) return new Carro();
