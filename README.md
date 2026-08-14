@@ -1,6 +1,6 @@
 # Factory Method e Abstract Factory
 
-Projeto desenvolvido em **Java Swing** para implementação dos padrões de projeto **Factory Method** e **Abstract Factory**, conforme a atividade proposta.
+Projeto desenvolvido por Pablo de Sousa Santos e Pedro Fernandes Araújo em **Java Swing** para implementação dos padrões de projeto **Factory Method** e **Abstract Factory**, conforme a atividade proposta.
 
 O projeto demonstra a criação de veículos por meio de fábricas, evitando que o código cliente dependa diretamente das classes concretas.
 
@@ -118,7 +118,7 @@ Dessa forma, cada montadora concreta deve fornecer produtos Sedan, Hatch e SUV.
 
 ---
 
-# 🇮🇹 Família Fiat
+# Família Fiat
 
 A família Fiat é composta pelos seguintes produtos:
 
@@ -147,7 +147,7 @@ A `FiatFactory` implementa `MontadoraFactory` e é responsável pela criação d
 
 ---
 
-# 🇩🇪 Família Volkswagen
+# Família Volkswagen
 
 A família Volkswagen é composta pelos seguintes produtos:
 
